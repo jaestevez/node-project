@@ -21,12 +21,12 @@ app.use(express.static(__dirname + '/public'));
 io.sockets.on('connection', function (socket) {
     socket.on('dato', function(data,callback){
         serialPort.write('DAT1%');
-      console.log('request : '+ data_value);
+      console.log('query : '+ data_value);
       callback(data_value);
     });
     socket.on('led', function(data){
         var rsp = 'LED'+data[1]+data[2]+((data[3] == '1')?'ON':'OFF') + '%';
-        console.log(rsp);
+        console.log('query : '+rsp);
             serialPort.write(rsp);
                 
     });
@@ -36,5 +36,5 @@ serialPort.on('data',function(data) {
     if(!isNaN(parseFloat(data) && parseFloat(data) != data_value))
         data_value = String(data);
     if(isNaN(parseFloat(data)))
-        console.log('valor invalido: '+ String(data));
+        console.log('valor(es) invalido(s): '+ String(data));
 });

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>prueba canvas</title>
+        <title>Grafica Temperatura SERIAL PORT ARDUINO UNO R3</title>
         <script type="text/javascript" src="/dependency/socket.io.js"></script>
         <script type="text/javascript" src="script/script.js"></script>
         <link href="styles/estilo.css" type="text/css" rel="stylesheet">
@@ -30,11 +30,11 @@
                     <option>Encender</option>
                     <option>Apagar</option>
                 </select>
-                <input type="button"  value="enviar" onclick="request_led()" id="bled"/>
+                <input type="button"  value="request" onclick="request_led()" id="bled"/>
             </form>
         </div>
         <div id="textt" height="80">
-            <h1 id="textg">GRAFICA TEMPERATURA ARDUINO</h1>
+            <h1 id="textg">TEMPERATURA ARDUINO</h1>
             <canvas id="display" width="150" height="60"></canvas>
         </div>
         <div id="content">
