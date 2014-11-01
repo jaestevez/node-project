@@ -14,7 +14,6 @@ var tipo_text = 'italic 42pt Calibri';
 var texto_inf = "Temperatura en °C";
 var linea_division;
 
-//var cont_select1 = 'opcion-led13'
 function request_led()
 {   
     var context_select = document.getElementById('opcion-led');
@@ -147,7 +146,7 @@ function data_received()
             if(parseFloat(data) >40)data = 40;
             if(parseFloat(data) <0 )data = 0;
             dato_recibido = parseFloat(data)*10;
-            console.log('data received: '+ dato_recibido/10);
+            console.log('data: '+ dato_recibido/10);
         }
   });
     
