@@ -1,0 +1,11 @@
+{
+  "author": "Jose Estevez",
+  "name": "medidortemperatura",
+  "description": "modelo cliente servidor",
+  "version": "0.4b",
+  "dependencies": {
+    "express": "3.x",
+    "socket.io":"1.x",
+    "serialport": "1.x"
+  }
+}

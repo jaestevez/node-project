@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>prueba canvas</title>
+        <script type="text/javascript" src="/dependency/socket.io.js"></script>
+        <script type="text/javascript" src="script/script.js"></script>
+        <link href="styles/estilo.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="led_content">
+            <form name="led">
+                <h2>PINES DIGITALES</h2>
+                <select name="n-led" id="n-led">
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                </select>
+                <select name="opcion-led" id="opcion-led">
+                    <option>Encender</option>
+                    <option>Apagar</option>
+                </select>
+                <input type="button"  value="enviar" onclick="request_led()" id="bled"/>
+            </form>
+        </div>
+        <div id="textt" height="80">
+            <h1 id="textg">GRAFICA TEMPERATURA ARDUINO</h1>
+            <canvas id="display" width="150" height="60"></canvas>
+        </div>
+        <div id="content">
+            <div id="content_up">
+                <canvas width="800" height="400" id="dibujo"></canvas>
+                <canvas width="20" height="420" id="eje_y"></canvas>
+            </div>
+            <canvas width="800" height="20" id="eje_x"></canvas>
+        </div>
+    <script type="text/javascript">
+        loadValues();
+        texto();
+        setInterval('data_received()',3000);
+        setInterval('inicio()',3000);
+    </script>
+    </body>
+</html>
